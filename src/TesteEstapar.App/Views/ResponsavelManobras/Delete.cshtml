@@ -1,0 +1,32 @@
+﻿@using TesteEstapar.App.Extensions
+@model TesteEstapar.App.ViewModels.ResponsavelManobraViewModel
+
+@{
+    ViewData["Title"] = "Excluir Responsável";
+}
+
+<vc:Summary></vc:Summary>
+<div>
+    <h4>Esta ação será permanente!</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Carro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Carro.Modelo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Manobrista)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Manobrista.Nome)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a class="btn btn-info" asp-action="Index">Voltar</a>
+    </form>
+</div>

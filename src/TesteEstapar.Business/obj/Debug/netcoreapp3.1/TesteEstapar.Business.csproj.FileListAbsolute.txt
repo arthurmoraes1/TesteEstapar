@@ -1,0 +1,8 @@
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\bin\Debug\netcoreapp3.1\TesteEstapar.Business.deps.json
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\bin\Debug\netcoreapp3.1\TesteEstapar.Business.dll
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\bin\Debug\netcoreapp3.1\TesteEstapar.Business.pdb
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\obj\Debug\netcoreapp3.1\TesteEstapar.Business.csprojAssemblyReference.cache
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\obj\Debug\netcoreapp3.1\TesteEstapar.Business.AssemblyInfoInputs.cache
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\obj\Debug\netcoreapp3.1\TesteEstapar.Business.AssemblyInfo.cs
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\obj\Debug\netcoreapp3.1\TesteEstapar.Business.dll
+D:\DesenvolvedorIO\TesteEstapar\TesteEstapar\src\TesteEstapar.Business\obj\Debug\netcoreapp3.1\TesteEstapar.Business.pdb

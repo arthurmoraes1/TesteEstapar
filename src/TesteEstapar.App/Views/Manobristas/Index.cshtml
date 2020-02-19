@@ -1,0 +1,52 @@
+﻿@using TesteEstapar.App.Extensions
+@model IEnumerable<TesteEstapar.App.ViewModels.ManobristaViewModel>
+
+@{
+    ViewData["Title"] = "Lista de Manobristas";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<vc:Summary></vc:Summary>
+<p>
+    <a class="btn btn-info" asp-action="Create">Novo Manobrista</a>
+</p>
+
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @this.FormataCpf(item.Cpf)
+                </td>
+                <td>
+                    @Convert.ToDateTime(item.DataNascimento).ToString("dd/MM/yyyy")
+                </td>
+                <td class="text-right">
+                    <a class="btn btn-warning" asp-controller="Manobristas" asp-action="Details" asp-route-id="@item.Id"><spam class="fa fa-search"></spam> </a>
+                    <a class="btn btn-info" asp-controller="Manobristas" asp-action="Edit" asp-route-id="@item.Id"><spam class="fa fa-pencil-alt"></spam> </a>
+                    <a class="btn btn-danger" asp-controller="Manobristas" asp-action="Delete" asp-route-id="@item.Id"><spam class="fa fa-trash"></spam> </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

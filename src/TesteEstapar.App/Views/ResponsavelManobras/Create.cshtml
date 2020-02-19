@@ -1,0 +1,33 @@
+﻿@model TesteEstapar.App.ViewModels.ResponsavelManobraViewModel
+
+@{
+    ViewData["Title"] = "Novo Responsável";
+}
+
+    <h1>@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Create">
+
+            <vc:Summary></vc:Summary>
+            <div class="form-group">
+                <label asp-for="ManobristaId" class="control-label"></label>
+                <select asp-for="ManobristaId" class="form-control" asp-items="@(new SelectList(Model.Manobristas, "Id", "Nome"))"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarroId" class="control-label"></label>
+                <select asp-for="CarroId" class="form-control" asp-items="@(new SelectList(Model.Carros, "Id", "Modelo"))"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a class="btn btn-info" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

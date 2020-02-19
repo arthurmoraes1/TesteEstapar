@@ -1,0 +1,39 @@
+﻿@using TesteEstapar.App.Extensions
+@model TesteEstapar.App.ViewModels.ManobristaViewModel
+
+@{
+    ViewData["Title"] = "Excluir Manobrista";
+}
+
+<vc:Summary></vc:Summary>
+<div>
+    <h4>Esta ação será permanente!</h4>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @this.FormataCpf(Model.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd class="col-sm-10">
+            @Convert.ToDateTime(Model.DataNascimento).ToString("dd/MM/yyyy")
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a class="btn btn-info" asp-action="Index">Voltar</a>
+    </form>
+</div>
